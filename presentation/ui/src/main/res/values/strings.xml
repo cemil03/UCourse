@@ -1,0 +1,17 @@
+<resources>
+
+    <string name="auth_title">Вход</string>
+    <string name="auth_action_login">Вход</string>
+    <string name="auth_email_hint">example@gmail.com</string>
+    <string name="auth_email">Email</string>
+
+    <string name="menu_main__home">Главная</string>
+    <string name="menu_main__favorite">Избранное</string>
+    <string name="menu_main__profile">Аккаунт</string>
+    <string name="auth_password">Пароль</string>
+    <string name="auth_password_hint">Введите пароль</string>
+    <string name="auth_not_have_account">Нет аккаунта?</string>
+    <string name="auth_action_signup">Регистрация</string>
+    <string name="auth_action_forget_password">Забыл пароль</string>
+
+</resources>

@@ -1,15 +1,50 @@
-*.iml
+# Built application files
+*.apk
+*.ap_
+*.aab
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+
+# Gradle files
+.gradle/
 .gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+build/
+
+# Signing files
+.signing/
+
+# Local configuration file (sdk path, etc)
 local.properties
+
+# Keystore configuration
+keystore.properties
+
+# Log Files
+*.log
+
+# IDE
+*.iml
+*/*.iml
+.idea/
+.scripts/
+captures/
+.cxx
+
+# External native build folder generated in Android Studio 2.2 and later
+.externalNativeBuild
+
+# OS temparory files
+.DS_Store
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

@@ -1,20 +1,17 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
 }
 
 android {
-    namespace = "com.example.ucourse"
+    namespace = "com.example.ui"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.ucourse"
         minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -33,14 +30,21 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
 
-    implementation(project(":data"))
-    implementation(project(":domain"))
-    implementation(project(":presentation:ui"))
-    implementation(project(":presentation:logic"))
+    val navigationVersion = "2.4.2"
+
+    implementation("com.github.kirich1409:viewbindingpropertydelegate-noreflection:1.5.6")
+
+    implementation("androidx.navigation:navigation-runtime-ktx:$navigationVersion")
+    implementation("androidx.navigation:navigation-fragment-ktx:$navigationVersion")
+    implementation("androidx.navigation:navigation-ui-ktx:$navigationVersion")
+
     implementation("io.insert-koin:koin-android:3.5.6")
 
     implementation(libs.androidx.core.ktx)
