@@ -1,0 +1,39 @@
+package com.example.ui.screens.courses
+
+import android.os.Bundle
+import android.view.View
+import android.view.ViewOutlineProvider
+import androidx.fragment.app.Fragment
+import by.kirich1409.viewbindingdelegate.viewBinding
+import com.example.ui.R
+import com.example.ui.databinding.ScreenCoursesBinding
+import com.example.ui.screens.courses.content.ContentAdapter
+import com.example.ui.utils.bind
+import org.koin.androidx.viewmodel.ext.android.viewModel
+
+
+class CoursesScreen : Fragment(R.layout.screen_courses) {
+
+    private val binding by viewBinding(ScreenCoursesBinding::bind)
+    private val viewModel by viewModel<CoursesViewModelApi>()
+    private var coursesAdapter : ContentAdapter? = null
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        coursesAdapter = ContentAdapter(viewModel::onItemClick)
+        binding.recycleViewCourses.adapter = coursesAdapter
+        bindViewModelOutputs()
+    }
+
+    private fun bindViewModelOutputs() = with(viewModel) {
+        items.bind(viewLifecycleOwner) {
+            coursesAdapter?.submitList(it)
+        }
+    }
+
+
+    override fun onDestroy() {
+        super.onDestroy()
+        coursesAdapter = null
+    }
+}

@@ -37,11 +37,20 @@ android {
 
 dependencies {
 
+    val retrofitVersion = "2.9.0"
+
     implementation(project(":data"))
     implementation(project(":domain"))
     implementation(project(":presentation:ui"))
     implementation(project(":presentation:logic"))
+
     implementation("io.insert-koin:koin-android:3.5.6")
+
+
+    implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
+    implementation("com.squareup.retrofit2:converter-scalars:$retrofitVersion")
+    implementation("com.squareup.retrofit2:adapter-rxjava3:$retrofitVersion")
+    implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

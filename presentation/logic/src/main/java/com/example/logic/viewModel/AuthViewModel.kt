@@ -1,4 +1,4 @@
-package com.example.logic
+package com.example.logic.viewModel
 
 import android.util.Patterns
 import com.example.ui.activity.auth.AuthViewModelApi

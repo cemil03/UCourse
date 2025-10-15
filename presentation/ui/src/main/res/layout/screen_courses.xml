@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:paddingHorizontal="18dp"
+    tools:context=".screens.courses.CoursesScreen">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_search"
+        style="@style/LoginTextInputLayoutStyle"
+        android:layout_width="260dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_input_text_auth"
+        app:layout_constraintBottom_toTopOf="@+id/password_title"
+        app:layout_constraintEnd_toStartOf="@+id/action_filter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/edit_search"
+            style="@style/LoginTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="10dp"
+            android:hint="@string/courses_search_hint"
+            android:inputType="textEmailAddress"
+            android:padding="15dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <ImageButton
+        android:id="@+id/action_filter"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="6dp"
+        android:background="@drawable/bg_btn_disabled"
+        android:src="@drawable/ic_filter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/input_search"
+        app:layout_constraintTop_toTopOf="@+id/input_search" />
+
+    <TextView
+        android:id="@+id/action_date_filter"
+        style="@style/Medium.ColorSecondary.14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:drawableEnd="@drawable/ic_arrow"
+        android:drawablePadding="4dp"
+        android:text="@string/courses_date_filter"
+        app:layout_constraintEnd_toEndOf="@id/action_filter"
+        app:layout_constraintTop_toBottomOf="@+id/action_filter" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle_view_courses"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/action_date_filter"
+            tools:listitem="@layout/layout_item_course" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

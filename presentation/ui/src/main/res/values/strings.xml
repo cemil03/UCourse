@@ -13,5 +13,8 @@
     <string name="auth_not_have_account">Нет аккаунта?</string>
     <string name="auth_action_signup">Регистрация</string>
     <string name="auth_action_forget_password">Забыл пароль</string>
+    <string name="courses_search_hint">Search courses...</string>
+    <string name="courses_date_filter">По дате добавления</string>
+    <string name="courses_details">Подробнее</string>
 
 </resources>

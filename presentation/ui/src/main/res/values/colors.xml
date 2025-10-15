@@ -6,16 +6,18 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="button_disabled_color">@color/colorPrimaryDark</color>
     <color name="button_enabled_color">@color/colorSecondary</color>
     <color name="button_wk_social_color">#2683ED</color>
     <color name="button_ok_social_start_color">#F98509</color>
     <color name="button_ok_social_end_color">#F95D00</color>
+    <color name="button_favorite_background_color">#4D32333A</color>
 
     <color name="stroke_color">#4D555E</color>
 
     <color name="light_gray">#32333A</color>
     <color name="auth_input_text_hint">#F2F2F3</color>
+
+
 
 
 </resources>

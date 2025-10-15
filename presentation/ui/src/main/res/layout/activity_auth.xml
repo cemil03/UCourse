@@ -48,11 +48,9 @@
             style="@style/LoginTextInputLayoutStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawablePadding="10dp"
             android:hint="@string/auth_email_hint"
             android:inputType="textEmailAddress"
-            android:padding="15dp"
-            android:textSize="16sp" />
+            android:padding="15dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -85,11 +83,9 @@
             style="@style/LoginTextInputLayoutStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawablePadding="10dp"
             android:hint="@string/auth_password_hint"
             android:inputType="textPassword"
-            android:padding="15dp"
-            android:textSize="16sp" />
+            android:padding="15dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
 

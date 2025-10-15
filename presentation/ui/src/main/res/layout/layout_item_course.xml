@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="230dp"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/bg_item_courses">
+
+    <eightbitlab.com.blurview.BlurTarget
+        android:id="@+id/blur_target"
+        android:layout_width="match_parent"
+        android:layout_height="116dp">
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_item_course" />
+    </eightbitlab.com.blurview.BlurTarget>
+
+    <ImageButton
+        android:id="@+id/action_favorite"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_btn_favorite"
+        android:src="@drawable/ic_favorite_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <eightbitlab.com.blurview.BlurView
+        android:id="@+id/blur_rating"
+        android:layout_width="46dp"
+        android:layout_height="22dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_blur_item"
+        app:blurOverlayColor="@color/button_favorite_background_color"
+        app:layout_constraintBottom_toBottomOf="@+id/blur_target"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/stars_point"
+            style="@style/Regular.ColorWhite.12"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableStart="@drawable/ic_star"
+            android:gravity="center"
+            android:paddingHorizontal="4dp"
+            tools:text="4.9" />
+
+    </eightbitlab.com.blurview.BlurView>
+
+    <eightbitlab.com.blurview.BlurView
+        android:id="@+id/blur_date"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_blur_item"
+        app:blurOverlayColor="@color/button_favorite_background_color"
+        app:layout_constraintBottom_toBottomOf="@+id/blur_target"
+        app:layout_constraintStart_toEndOf="@id/blur_rating">
+
+        <TextView
+            android:id="@+id/publish_date"
+            style="@style/Regular.ColorWhite.12"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingHorizontal="4dp"
+            tools:text="12 Мая 2024" />
+
+    </eightbitlab.com.blurview.BlurView>
+
+    <TextView
+        android:id="@+id/course_title"
+        style="@style/Medium.ColorWhite.16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/blur_target"
+        tools:text="Java курсы с нуля" />
+
+    <TextView
+        android:id="@+id/course_caption"
+        style="@style/Regular.ColorWhite.12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:maxLines="2"
+        app:layout_constraintEnd_toEndOf="@id/action_details"
+        android:ellipsize="end"
+        app:layout_constraintStart_toStartOf="@id/course_title"
+        app:layout_constraintTop_toBottomOf="@id/course_title"
+        tools:text="Java курсы с нуля" />
+
+
+    <TextView
+        android:id="@+id/course_price"
+        style="@style/Medium.ColorWhite.16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawableEnd="@drawable/ic_price"
+        android:drawablePadding="4dp"
+        app:layout_constraintStart_toStartOf="@id/course_title"
+        app:layout_constraintTop_toBottomOf="@id/course_caption"
+        tools:text="999" />
+
+    <TextView
+        android:id="@+id/action_details"
+        style="@style/SemiBold.ColorSecondary.12"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginRight="16dp"
+        android:drawableEnd="@drawable/ic_details"
+        android:drawablePadding="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/course_caption"
+        app:layout_constraintTop_toTopOf="@+id/course_price"
+        android:text="@string/courses_details" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
