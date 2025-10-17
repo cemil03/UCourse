@@ -12,6 +12,8 @@
     <color name="button_ok_social_end_color">#F95D00</color>
     <color name="button_favorite_background_color">#4D32333A</color>
 
+    <color name="profile_background_blur_color">#E6AEB3B8</color>
+
     <color name="stroke_color">#4D555E</color>
 
     <color name="light_gray">#32333A</color>

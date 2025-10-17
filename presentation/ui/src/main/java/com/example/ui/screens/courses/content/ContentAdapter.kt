@@ -7,13 +7,14 @@ import com.example.ui.databinding.LayoutItemCourseBinding
 
 
 class ContentAdapter(
-    private val onItemClick: (ContentItem) -> Unit
+    private val onItemClick: (ContentItem) -> Unit,
+    private val onFavoriteClick: (ContentItem) -> Unit
 ) : ListAdapter<ContentItem, ContentViewHolder>(CourseDiffCallback) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContentViewHolder {
         val binding = LayoutItemCourseBinding.inflate(
             LayoutInflater.from(parent.context), parent, false
         )
-        return ContentViewHolder(binding, onItemClick)
+        return ContentViewHolder(binding, onItemClick, onFavoriteClick)
     }
 
     override fun onBindViewHolder(holder: ContentViewHolder, position: Int) {

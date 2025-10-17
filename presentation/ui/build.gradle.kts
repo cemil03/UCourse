@@ -37,17 +37,14 @@ android {
 
 dependencies {
 
-    val navigationVersion = "2.4.2"
+    implementation(libs.viewbinding)
 
-    implementation("com.github.kirich1409:viewbindingpropertydelegate-noreflection:1.5.6")
+    implementation(libs.navigation.runtime.ktx)
+    implementation(libs.navigation.fragment.ktx)
+    implementation(libs.navigation.ui.ktx)
 
-    implementation("androidx.navigation:navigation-runtime-ktx:$navigationVersion")
-    implementation("androidx.navigation:navigation-fragment-ktx:$navigationVersion")
-    implementation("androidx.navigation:navigation-ui-ktx:$navigationVersion")
-
-    implementation("io.insert-koin:koin-android:3.5.6")
-
-    implementation("com.github.Dimezis:BlurView:version-3.1.0")
+    implementation(libs.koin.android)
+    implementation(libs.blurview)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

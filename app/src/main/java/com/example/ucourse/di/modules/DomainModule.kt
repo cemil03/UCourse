@@ -5,6 +5,6 @@ import org.koin.dsl.module
 
 val domainModule = module {
     factory {
-        CoursesRepository(api = get())
+        CoursesRepository(api = get(), courseDao = get())
     }
 }

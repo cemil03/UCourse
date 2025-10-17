@@ -1,11 +1,8 @@
 package com.example.ucourse.di.network
 
-
-import com.google.gson.GsonBuilder
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.converter.scalars.ScalarsConverterFactory
 
 const val BASE_URL = "https://drive.usercontent.google.com/"
 internal val serversModule = module {
@@ -21,15 +18,6 @@ private fun provideRetrofit(
 ): Retrofit {
     return Retrofit.Builder()
         .baseUrl(baseUrl)
-        .addConverterFactory(ScalarsConverterFactory.create())
-        .addConverterFactory(createGsonFactory())
+        .addConverterFactory(GsonConverterFactory.create())
         .build()
 }
-
-private fun createGsonFactory(): GsonConverterFactory {
-    val gson = GsonBuilder()
-        .setLenient()
-        .create()
-    return GsonConverterFactory.create(gson)
-}
-

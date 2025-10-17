@@ -50,6 +50,10 @@
         <item name="android:textSize">12sp</item>
     </style>
 
+    <style name="Regular.ColorWhite.22">
+        <item name="android:textSize">22sp</item>
+    </style>
+
     <style name="Medium.ColorWhite.16">
         <item name="android:textSize">16sp</item>
     </style>
@@ -60,6 +64,14 @@
 
     <style name="SemiBold.ColorWhite.12">
         <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="SemiBold.ColorWhite.20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="SemiBold.ColorWhite.30">
+        <item name="android:textSize">30sp</item>
     </style>
 
     <style name="SemiBold.ColorSecondary.12">

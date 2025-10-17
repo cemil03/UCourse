@@ -3,16 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/coursesScreen">
+    app:startDestination="@id/home">
 
     <fragment
-        android:id="@+id/coursesScreen"
+        android:id="@+id/home"
         android:name="com.example.ui.screens.courses.CoursesScreen"
         android:label="fragment_courses_screen"
         tools:layout="@layout/screen_courses" />
     <fragment
-        android:id="@+id/favoritesScreen"
+        android:id="@+id/favorite"
         android:name="com.example.ui.screens.favorites.FavoritesScreen"
         android:label="fragment_favorites_screen"
         tools:layout="@layout/screen_favorites" />
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.ui.screens.profile.ProfileScreen"
+        android:label="screen_profile"
+        tools:layout="@layout/screen_profile" />
 </navigation>
