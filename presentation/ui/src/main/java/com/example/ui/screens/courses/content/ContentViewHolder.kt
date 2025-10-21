@@ -17,13 +17,12 @@ class ContentViewHolder(
 
     fun bind(contentItem: ContentItem) = with(binding) {
         initBlurItems()
-        initFavoriteView(root.context, contentItem.hasLike)
         courseTitle.text = contentItem.title
         courseCaption.text = contentItem.text
         coursePrice.text = contentItem.price
         starsPoint.text = contentItem.rate
         publishDate.text = formatDate(contentItem.startDate)
-
+        actionFavorite.setImageDrawable(getFavoriteIcon(root.context, contentItem.hasLike))
         root.setOnClickListener { onItemClick(contentItem) }
         actionFavorite.setOnClickListener { onFavoriteClick(contentItem) }
     }
@@ -40,15 +39,11 @@ class ContentViewHolder(
             .format(DateTimeFormatter.ofPattern(DATE_PATTERN, Locale(LOCALE_RUSSIAN)))
 
 
-    private fun initFavoriteView(context: Context, isFavorite: Boolean) = with(binding) {
-        val icon = if (isFavorite) {
-            ContextCompat.getDrawable(context, R.drawable.ic_saved)
-        } else {
-            ContextCompat.getDrawable(context, R.drawable.ic_favorite_small)
-        }
-        actionFavorite.setImageDrawable(icon)
+    private fun getFavoriteIcon(context: Context, isFavorite: Boolean) = if (isFavorite) {
+        ContextCompat.getDrawable(context, R.drawable.ic_saved_small)
+    } else {
+        ContextCompat.getDrawable(context, R.drawable.ic_favorite_small)
     }
-
 
     companion object {
         private const val BLUR_RADIUS = 5f

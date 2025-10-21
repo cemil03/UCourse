@@ -9,17 +9,25 @@
     <string name="menu_main__home">Главная</string>
     <string name="menu_main__favorite">Избранное</string>
     <string name="menu_main__profile">Аккаунт</string>
+
     <string name="auth_password">Пароль</string>
     <string name="auth_password_hint">Введите пароль</string>
     <string name="auth_not_have_account">Нет аккаунта?</string>
     <string name="auth_action_signup">Регистрация</string>
     <string name="auth_action_forget_password">Забыл пароль</string>
+
     <string name="courses_search_hint">Search courses...</string>
     <string name="courses_date_filter">По дате добавления</string>
     <string name="courses_details">Подробнее</string>
+
     <string name="profile_coming_soon">COMING SOON</string>
     <string name="profile_сaption">Мы работаем над этим!</string>
+
     <string name="favorites_title">Избранное</string>
 
-
+    <string name="course_details_author">Автор</string>
+    <string name="course_details_author_name">Merion Academy</string>
+    <string name="course_details_start_course">Начать курс</string>
+    <string name="course_details_navigate_to_platform">Перейти на платформу</string>
+    <string name="course_details_course_information">О курсе</string>
 </resources>

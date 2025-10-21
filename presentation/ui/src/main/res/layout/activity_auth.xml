@@ -88,7 +88,6 @@
             android:padding="15dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <Button
         android:id="@+id/action_login"
         style="@style/ButtonStyle"

@@ -9,15 +9,28 @@
         android:id="@+id/home"
         android:name="com.example.ui.screens.courses.CoursesScreen"
         android:label="fragment_courses_screen"
-        tools:layout="@layout/screen_courses" />
+        tools:layout="@layout/screen_courses" >
+        <action
+            android:id="@+id/action_home_to_courseDetailsScreen"
+            app:destination="@id/courseDetailsScreen" />
+    </fragment>
     <fragment
         android:id="@+id/favorite"
         android:name="com.example.ui.screens.favorites.FavoritesScreen"
         android:label="fragment_favorites_screen"
-        tools:layout="@layout/screen_favorites" />
+        tools:layout="@layout/screen_favorites" >
+        <action
+            android:id="@+id/action_favorite_to_courseDetailsScreen"
+            app:destination="@id/courseDetailsScreen" />
+    </fragment>
     <fragment
         android:id="@+id/profile"
         android:name="com.example.ui.screens.profile.ProfileScreen"
         android:label="screen_profile"
         tools:layout="@layout/screen_profile" />
+    <fragment
+        android:id="@+id/courseDetailsScreen"
+        android:name="com.example.ui.screens.courseDetails.CourseDetailsScreen"
+        android:label="screen_course_details"
+        tools:layout="@layout/screen_course_details" />
 </navigation>

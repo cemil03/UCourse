@@ -23,7 +23,7 @@
         android:id="@+id/blur_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:blurOverlayColor="@color/button_favorite_background_color">
+        app:blurOverlayColor="@color/course_item_background_overlay_color">
 
         <TextView
             android:id="@+id/app_name"

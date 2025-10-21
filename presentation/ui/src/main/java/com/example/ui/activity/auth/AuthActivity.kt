@@ -29,7 +29,6 @@ class AuthActivity : AppCompatActivity(R.layout.activity_auth) {
     private fun bindViewModelInputs() = with(binding) {
         actionLogin.setOnClickListener {
             startActivity(
-
                 Intent(
                     this@AuthActivity,
                     MainActivity::class.java

@@ -10,13 +10,12 @@
     tools:context=".screens.favorites.FavoritesScreen">
 
     <TextView
+        android:id="@+id/favorite_title"
         style="@style/Regular.ColorWhite.22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="@string/favorites_title"
-
-        />
+        android:text="@string/favorites_title" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycle_view_courses"

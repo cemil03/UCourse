@@ -13,7 +13,7 @@
         android:layout_height="116dp">
 
         <ImageView
-            android:id="@+id/item_image"
+            android:id="@+id/course_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"
@@ -35,8 +35,8 @@
         android:layout_width="46dp"
         android:layout_height="22dp"
         android:layout_margin="10dp"
-        android:background="@drawable/bg_blur_item"
-        app:blurOverlayColor="@color/button_favorite_background_color"
+        android:background="@drawable/bg_rounded_corner"
+        app:blurOverlayColor="@color/course_item_background_overlay_color"
         app:layout_constraintBottom_toBottomOf="@+id/blur_target"
         app:layout_constraintStart_toStartOf="parent">
 
@@ -56,10 +56,10 @@
         android:id="@+id/blur_date"
         android:layout_width="wrap_content"
         android:layout_height="22dp"
-        android:layout_margin="10dp"
-        android:background="@drawable/bg_blur_item"
-        app:blurOverlayColor="@color/button_favorite_background_color"
-        app:layout_constraintBottom_toBottomOf="@+id/blur_target"
+        android:layout_marginStart="6dp"
+        android:background="@drawable/bg_rounded_corner"
+        app:blurOverlayColor="@color/course_item_background_overlay_color"
+        app:layout_constraintBottom_toBottomOf="@+id/blur_rating"
         app:layout_constraintStart_toEndOf="@id/blur_rating">
 
         <TextView
@@ -68,7 +68,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:paddingHorizontal="4dp"
+            android:paddingHorizontal="8dp"
             tools:text="12 Мая 2024" />
 
     </eightbitlab.com.blurview.BlurView>
@@ -90,6 +90,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:maxLines="2"
+        android:alpha="0.7"
         app:layout_constraintEnd_toEndOf="@id/action_details"
         android:ellipsize="end"
         app:layout_constraintStart_toStartOf="@id/course_title"
@@ -121,6 +122,4 @@
         app:layout_constraintTop_toBottomOf="@id/course_caption"
         app:layout_constraintTop_toTopOf="@+id/course_price"
         android:text="@string/courses_details" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
